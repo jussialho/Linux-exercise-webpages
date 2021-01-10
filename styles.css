@@ -1,0 +1,42 @@
+body {font-family: Ubuntu;}
+.bg-footer {background-color:#cedbe6}
+.figure-caption {
+	font-size:0.75rem;
+	color:#504d46
+}
+.footer-copyright {font-size:0.85rem}
+.red {color: #ea205e}
+.green {color: #add439}
+.blue {color: #2e90e8}
+.light {color: #cedbe6}
+.gray {color: #c1c1c1}
+.active {color: #131131 !important}
+.dark {background-color:#131131}
+.nav-link:hover{
+	color: white;
+}
+div.code {
+	background-color:#2d0922;
+	color:white;
+	font-weight:normal !important;
+	display:block;
+	display:inline}
+.ref::before {
+	font-weight: bold;
+	color: #6ca42f;
+	content: "$ ";
+	font-family: 'Courier New';
+}
+hr.dashed {
+	border-top: 3px dashed #999;
+	margin: 30px 0px 30px 0px;
+}
+ol {
+	background-color: #c1c1c1;
+	color:black
+}
+.param {
+	background-color:#add439;
+	font-weight:bold;
+}
+ul li {margin: 10px 0px 10px 0px;}

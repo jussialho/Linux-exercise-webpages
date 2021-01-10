@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NetBeans | Asennus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="text-center" style="margin-bottom:0">
+  <a href="index.html"><img src="images/netbeans-logo.png" /></a>
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-dark dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link light" href="index.html">Etusivu</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link blue" href="netbeans.html">NetBeans</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active" href="">Asennus ja konfigurointi</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link green" href="kaytto.html">Käyttö</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link gray" href="lahteet.html">Lähteet</a>
+		</li>
+	</ul>
+  </div>  
+</nav>
+
+<div class="container mt-3">
+	<div class="row">
+		<div class="col">
+			<h3>NetBeansin asennus Ubuntuun</h3>
+			<p>Kuten useimmat ohjelmat, myös NetBeans voidaan asentaa Linuxille monella eri tavalla sekä terminaalista että sovelluskirjastosta. Itse asensin ohjelman suoraan terminaalista, jonka senkin voi tehdä monella eri tavalla. Valitsemani asennustapa osoittautui lopulta varsin yksinkertaiseksi ja toimivaksi, vaikka siinä olikin muutama huomioonotettava asia. NetBeans vaatii toimiakseen Javan ajo- ja kehitysympäristön (JDK & JRE), joista tämäkin asennusohje aloitetaan</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+		<h4>JDK:n asennus</h4>
+		<p>Uusin NetBeans vaatii toimiakseen vähintään Javan version 8, jonka itsekin asensin. Asensin aluksi uusimman Java 11:n, mutta sen yhteensopivuudessa NetBeansin kanssa oli sen verran ongelmia, että päätin vaihtaa Java-versioon 8.</p>
+		</div>
+	<div class="row">
+		<div class="col-sm-6">
+		<ol>
+		<li>
+		<p class="ohje">Aloitetaan asennus avaamalla Ubuntun <strong>Terminal</strong>, eli komentorivi, hakemalla se sovellusvalikosta tai näppäimistön pikakomennolla<br>
+		<kbd>Ctrl + Alt + T</kbd>.</p>
+		</li><li>
+		<p class="ohje">Päivitetään pakettilista komennolla</p><div class="code p-2 m-2 rounded-lg ref">sudo apt update</div>
+		</li><li>
+		<p class="ohje mt-3">Asennetaan Javan <strong>OpenJDK8</strong>-paketti kirjoittamalla</p><div class="code p-2 m-2 rounded-lg ref">sudo apt install openjdk-8-jdk</div>
+		</li><li>
+		<p class="ohje mt-3">Varmistetaan asennuksen onnistuminen kirjoittamalla komento, joka näyttää Javan version: </p><div class="code p-2 m-2 rounded-lg ref">java -version</div>
+		<p class="ohje mt-3">Tuloksen pitäisi olla suurinpiirtein seuraavanlainen:</p>
+		<img src="images/2-java_version.png" class="figure-img img-fluid d-block" />
+		</li>
+		</ol>
+		</div>
+		<div class="col-sm-6">
+			<figure>
+				<img src="images/3-java.png" class="figure-img img-fluid img-thumbnail d-block" />
+				<figcaption class="figure-caption">JDK8:n asennus</figcaption>
+			</figure>
+		</div>
+	</div>
+	</div>
+	<hr class="dashed">
+	<div class="row">
+		<div class="col-sm-12">
+		<h4>NetBeans IDE:n asennus</h4>
+		<p>Asennushetkellä uusin NetBeans-versio oli 12.0. Se voidaan asentaa Linuxin terminaalistakin monella tavalla, mutta todennäköisesti helpoin tapa on käyttää <a href="https://snapcraft.io/">snap</a>-paketointijärjestelmää, minkä mukaan tämä ohjekin on tehty.</p>
+		<ol>
+		<li>
+		<p class="ohje">Ladataan ja asennetaan NetBeansin <em>snap</em> -paketti kirjoittamalla komento</p>
+		<div class="code p-2 m-2 rounded-lg ref">sudo snap install netbeans &nbsp;&nbsp;-&nbsp;-&nbsp;classic</div>
+		<p class="ohje mt-3">(Kestää jonkin aikaa, riippuen verkkoyhteyden nopeudesta...)</p>
+		</li><li>
+		<p class="ohje mt-3">Jos kaikki meni kuten piti, pitäisi näytölle ilmestyä seuraavanlainen teksti:</p>
+		<img src="images/4-installed.png" class="figure-img img-fluid d-block" />
+		</li>
+		<p class="ohje">Onneksi olkoon, olet asentanut NetBeans IDE:n onnistuneesti Ubuntullesi.</p>
+		</ol>
+		</div>
+	</div>
+	<hr class="dashed">
+	<div class="row">
+		<div class="col-sm-6">
+		<h4>NetBeans IDE:n konfigurointi</h4>
+		<p>NetBeansi IDE:ä voidaan konfiguroida monella tavalla joko komentoriviltä parametreina käynnistyksen yhteydessä tai muokkaamalla konfigurointitiedostoa. Valinnat määritellään <kbd>netbeans.conf</kbd> -tiedostossa, joka toimiteaan NetBeans-jakelun mukana.</p>
+		<p>Linuxilla tämä tiedosto löytyy NetBeansin asennushakemistosta<br><kbd>&lt;NetBeans asennushakemisto&gt;/etc/netbeans.conf</kbd>. Minun tapauksessani NetBeans asennettiin juurihakemistoon, joten polku konfigurointitiedostoon on <kbd>/etc/netbeans.conf</kbd>.
+		<p>Tiedosto on yksinkertainen tekstitiedosto, joka voidaan avata katsottavaksi ja muokattavaksi millä tahansa tekstieditorilla, esim. <strong><em>Nanolla</em></strong>. Katsotaan seuraavaksi tuon tiedoston sisältöä ja muokkausvaihtoehtoja.</p>
+		<ul>
+			<li class="param">
+				netbeans_default_userdir</li>
+				<ul>
+					<li><em>userdir</em> on hakemisto, mihin NetBeans tallentaa käyttäjädataa, kuten ohjelmaikkunoiden asettelun, editorin asetuksia ym. Tässä voit muuttaa <em>userdir</em>-hakemiston oletusnimeä ja -sijaintia.</li>
+				</ul>
+			
+			<li class="param">
+				netbeans_default_cachedir</li>
+				<ul>
+					<li><em>cachedir</em> on nimensä mukaan välimuistin hakemisto, joka sisältää tiedostoja, jotka muuttuvat useasti, saattavat poistua ja tulla takaisin ja myös kasvaa suuriksi. Voit muuttaa <em>cachedir</em>-hakemiston oletusnimeä ja -sijaintia.</li>
+				</ul>
+			<li class="param">
+				netbeans_default_options</li>
+				<ul>
+					<li>NetBeansin käynnistyksessä käytettävät oletusvalinnat, kuten debuggausvalinnat, muistin käyttöön liittyvät valinnat ja esim. sovelluksen fonttikoko. Fonttikoko voidaan vaihtaa esim. kokoon 20 lisäämällä parametri <em>--fontsize 20</em> tähän komentoon tai suoraan komentoriville käynnistyksen yhteydessä, esim. <kbd>netbeans --fontsize 20</kbd>.</li>
+				</ul>
+			<li class="param">
+				netbeans_jdkhome</li>
+				<ul>
+					<li>NetBeansin käynnistyksessä käytettävän JDK:n oletussijainti. Voidaan vaihtaa parametrilla <em>--jdkhome</em>, esim.<br><kbd>netbeans --jdkhome /usr/bin/jdk1.9.0_245</kbd>.</li>
+				</ul>
+		</ul>
+		</div>
+		<div class="col-sm-6">
+			<figure>
+				<img src="images/5-netbeans_conf.png" class="figure-img img-fluid img-thumbnail d-block" />
+				<figcaption class="figure-caption">netbeans.conf -tiedosto Nano-editorissa.</figcaption>
+			</figure>
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer pt-3 bg-footer">
+  <div class="footer-copyright text-center pb-3">© Jussi Alho | Linux-harjoitustyö | Kevät 2020 |
+    <a href="https://www.w3schools.com/bootstrap4/bootstrap_templates.asp"> Template: W3Schools</a>
+  </div>
+</footer>
+
+</body>
+</html>
+
